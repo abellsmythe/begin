@@ -6,7 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
-	<meta name="description" content="">
+  <meta name="description" content="">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
 	<!-- stylesheets css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
@@ -41,13 +42,13 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-sm-12">
           <div class="home-thumb">
-            <h1 class="wow fadeInUp" data-wow-delay="0.4s">
+            <h1 class="wow fadeInUp text-shadow" data-wow-delay="0.4s">
               Hello!
             </h1>
-            <h3 class="wow fadeInUp" data-wow-delay="0.6s">
+            <h3 class="wow fadeInUp text-shadow" data-wow-delay="0.6s">
               You are almost <strong>ready to launch</strong> your website!
             </h3>
-            <a href="#about" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="0.8s">
+            <a href="#about" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs text-shadow" data-wow-delay="0.8s">
               Let's begin
             </a>
           </div>
@@ -60,7 +61,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12">
-          <img src="images/about-img.png" class="img-responsive wow fadeInUp" alt="About">
+          <img src="img/about-img.png" class="img-responsive wow fadeInUp" alt="About">
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="about-thumb">
@@ -138,7 +139,7 @@
           </div>
         </div>
         <div class="clearfix text-center col-md-12 col-sm-12">
-          <a href="#contact" class="btn btn-default smoothScroll">
+          <a href="#contact" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1.4s">
             Talk to us
           </a>
         </div>
@@ -161,13 +162,13 @@
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
             <form id="contact-form" method="post" action="#">
               <div class="col-md-6 col-sm-6">
-                <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+                <input id="name" name="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
               <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+                <input id="email" name="email" type="email" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" placeholder="Message" rows="6" required></textarea>
+                <textarea id="message" name="message" class="form-control" placeholder="Message" rows="6" required></textarea>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
                 <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
@@ -190,9 +191,9 @@
             Begin
           </h2>
             <div class="wow fadeInUp" data-wow-delay="0.3s">
-              <p>Lorem ipsum luctus dolor consectetur adipiscing elit sit amet. Quisque lacus nulla.</p>
+              <p>Lorem ipsum luctus dolor consectetur adipiscing elit sit.</p>
               <p class="copyright-text">
-                Copyright &copy; 2016 Your Company
+                Copyright &copy; 2018 Your Company
                 <br>
                 Designed by 
                 <a href="https://abellsmythe.me" target="_blank" rel="noopener noreferrer">
@@ -201,8 +202,8 @@
               </p>
             </div>
         </div>
-        <div class="col-md-1 col-sm-1"></div>
-        <div class="col-md-4 col-sm-5">
+        <div class="col-md-4 col-sm-1"></div>
+        <div class="col-md-4 col-sm-6">
           <h2>Our Studio</h2>
           <p class="wow fadeInUp" data-wow-delay="0.6s">
             1309 aliquam augue libero,<br>
@@ -226,6 +227,7 @@
   <script src="js/vegas.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/smoothscroll.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

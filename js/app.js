@@ -13,13 +13,13 @@ $(document).ready(function() {
    */
   $(function() {
     $('body').vegas({
-      timer: true,
-      overlay: true,
-      transition: 'fade',
-      transitionDuration: 5000,
+      preload: true,
+      overlay: 'img/overlay.png',
+      transitionDuration: 1000,
+      delay: 10000,
       slides: [
-        { src: 'images/background-1.jpg' },
-        { src: 'images/background-2.jpg' }
+        { src: 'img/background-1.jpg' },
+        { src: 'img/background-2.jpg' }
       ],
     });
   });
@@ -44,5 +44,42 @@ $(document).ready(function() {
    * wow
    */
   new WOW({ mobile: false }).init();
+
+  /*
+   * Validate Form
+   */
+  $('#contact-form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 1,
+      },
+      email: {
+        required: true,
+        email:true,
+      },
+      message: {
+        required: true,
+        minlength: 1,
+      },
+    },
+    messages: {
+      name: {
+        required: "Please enter your name",
+        minlength: "Your name must be at least 1 character long",
+      },
+      email: {
+        required: "Please enter your email",
+        email: "Please enter a valid email address",
+      },
+      message: {
+        required: "Please provide a message",
+        minlength: "Your message must be at least 1 character long",
+      },
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
 
 });
