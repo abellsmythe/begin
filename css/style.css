@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #F1C11A;
+  --secondary-color: #FFF;
+  --third-color: #828282;
+  --fourth-color: #111;
+  --primary-background-color: #FFF;
+  --secondary-background-color: #111;
+  --go-top-background-color: #EEE;
+  --shadow-color: #333;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +16,7 @@
 }
 
 body {
-  background: #ffffff;
+  background: var(--primary-background-color, #FFF);
   font-family: 'Rajdhani', sans-serif;
   font-weight: 400;
 }
@@ -33,23 +44,24 @@ h1 {
 }
 
 h2 {
-  color: #ffffff;
+  color: var(--secondary-color, #FFF);
   padding-bottom: 10px;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 2rem;
 }
 
 p {
-  color: #828282;
+  color: var(--third-color, #828282);
   letter-spacing: 0.8px;
   line-height: 28px;
+  text-align: justify;
 }
 
 strong {
-  color: #f1c11a;
+  color: var(--primary-color, #F1C11A);
   font-weight: 700;
 }
 
@@ -68,7 +80,7 @@ a:visited {
 #about,
 #feature,
 #contact {
-  background: #ffffff;
+  background: var(--primary-background-color, #FFF);
 }
 
 #about,
@@ -77,6 +89,10 @@ a:visited {
 footer {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.text-shadow {
+  text-shadow: 0 0 5px var(--shadow-color, #333);
 }
 
 .section-title {
@@ -92,8 +108,9 @@ footer {
   text-align: center;
 }
 
-
-/* preloader section  */
+/* 
+ * Preloader 
+ */
 .preloader {
   position: fixed;
   top: 0;
@@ -105,7 +122,7 @@ footer {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background: none repeat scroll 0 0 #ffffff;
+  background: none repeat scroll 0 0 var(--primary-background-color, #FFF);
 }
 
 .sk-circle {
@@ -210,18 +227,24 @@ footer {
 @-webkit-keyframes sk-circleBounceDelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
-            transform: scale(0); }
+            transform: scale(0); 
+  }
   40% {
     -webkit-transform: scale(1);
-            transform: scale(1); } }
+            transform: scale(1); 
+  } 
+}
 
 @keyframes sk-circleBounceDelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
-            transform: scale(0); }
+            transform: scale(0); 
+  }
   40% {
     -webkit-transform: scale(1);
-            transform: scale(1); } }
+            transform: scale(1); 
+  } 
+}
 
 #slideshow {
   top: 0;
@@ -231,8 +254,9 @@ footer {
   backface-visibility: hidden;
 }
 
-
-/* home section */
+/* 
+ * Home 
+ */
 #home {
   display: -webkit-box;
   display: -webkit-flex;
@@ -244,7 +268,7 @@ footer {
         align-items: center;
   text-align: center;
   height: 100vh;
-  color: #ffffff;
+  color: var(--secondary-color, #FFF);
 }
 
 #home .home-thumb {
@@ -253,9 +277,9 @@ footer {
 
 #home .btn {
     background: transparent;
-    border: 3px solid #ffffff;
+    border: 3px solid var(--secondary-color, #FFF);
     border-radius: 0px;
-    color: #ffffff;
+    color: var(--secondary-color, #FFF);
     font-weight: 700;
     letter-spacing: 1px;
     padding: 14px 36px;
@@ -266,17 +290,16 @@ footer {
 }
 
 #home .btn:hover {
-  background: #f1c11a;
-  color: #ffffff;
+  background: var(--primary-color, #F1C11A);
+  color: var(--secondary-color, #FFF);
   border-color: transparent;
 }
 
 #home .btn-success {
-    background: #ffffff;
+    background: var(--secondary-color, #FFF);
     color: #242424;
     border-color: transparent;
 }
-
 
 /* about section */
 #about h3 {
@@ -287,27 +310,26 @@ footer {
   padding-top: 10px;
 }
 
-
 /* feature section */
 #feature {
-  background: #f1c11a;
+  background: var(--primary-color, #F1C11A);
 }
 
 #feature .icon {
-  color: #ffffff;
+  color: var(--secondary-color, #FFF);
   font-size: 42px;
   padding-right: 14px;
 }
 
 #feature p {
-  color: #333;
+  color: var( --third-color, #828282);
 }
 
 #feature .btn {
     background: transparent;
-    border: 3px solid #ffffff;
+    border: 3px solid var(--secondary-color, #FFF);
     border-radius: 0px;
-    color: #ffffff;
+    color: var(--secondary-color, #FFF);
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -319,17 +341,17 @@ footer {
 }
 
 #feature .btn:hover {
-  background: #ffffff;
-  color: #333;
+  background: var(--secondary-color, #FFF);
+  color: var( --third-color, #828282);
   border-color: transparent;
 }
 
-
-
-/* contact section  */
+/* 
+ * Contact 
+ */
 #contact .form-control {
   background: transparent;
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--secondary-color, #FFF);
   border-radius: 0px;
   box-shadow: none;
   font-size: 16px;
@@ -341,12 +363,14 @@ footer {
   border-color: #999;
 }
 
-#contact input {height: 55px;}
+#contact input {
+  height: 55px;
+}
 
 #contact input[type='submit'] {
   background: #242424;
   border: none;
-  color: #ffffff;
+  color: var(--secondary-color, #FFF);
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -355,13 +379,14 @@ footer {
 }
 
 #contact input[type='submit']:hover {
-  background: #f1c11a;
+  background: var(--primary-color, #F1C11A);
 }
 
-
-/* footer section  */
+/* 
+ * Footer
+ */
 footer {
-  background: #111112;
+  background: var(--secondary-background-color, #111);
 }
 
 footer .copyright-text {
@@ -369,18 +394,15 @@ footer .copyright-text {
 }
 
 footer a {
-	color: #fff;
+	color: var(--secondary-color, #FFF);
 }
 
 footer a:hover {
-	color: #FF6;
+	color: var(--primary-color, #F1C11A);
 }
 
 /* svg */
 .svgcolor-light {
-  /*position: absolute;
-  top: 0;
-  left: 0; */
   position: relative;
   bottom: 104px;
 }
@@ -390,80 +412,18 @@ footer a:hover {
   stroke-width: 0;
 }
 
-/* modal */
-.modal-dialog .modal-content {
-  background: url('../images/modal-bg.jpg') no-repeat;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 0;
-  text-align: center;
-  padding: 100px 50px 100px 50px;
-  position: relative;
-}
-
 .btn:focus {
   outline: none;
 }
 
-.modal-header {
-  border-bottom: 0px;
-}
-
-.modal-dialog .close {
-  color: #f1c11a;
-  font-size: 40px;
-  font-weight: 300;
-  text-shadow: none;
-  opacity: 1;
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  border: 2px solid #ffffff;
-  border-radius: 100px;
-  width: 36px;
-  height: 36px;
-  line-height: 35px;
-  text-align: center;
-}
-.modal-dialog .close:focus {
-  outline: none;
-}
-
-.modal-dialog form {
-  padding: 20px;
-}
-.modal-dialog form input {
-  height: 55px;
-}
-.modal-dialog form .form-control {
-  background: transparent;
-  border: 1px solid #f0f0f0;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 20px;
-  color: #fff;
-  margin-bottom: 20px;
-  transition: all 0.4s ease-in-out;
-}
-
-.modal-dialog form input[type="submit"] {
-  background: #ffffff;
-  color: #242424;
-  text-transform: uppercase;
-  margin-top: 30px;
-}
-.modal-dialog form input[type="submit"]:hover {
-  background: #f1c11a;
-  border-color: transparent;
-  color: #ffffff;
-}
-
-/* Back top */
+/* 
+ * Back top 
+ */
 .go-top {
-  background-color: #eee;
+  background-color: var(--go-top-background-color, #EEE);
   bottom: 2em;
   right: 2em;
-  color: #111112;
+  color: var(--fourth-color, #111);
   font-size: 22px;
   display: none;
   position: fixed;
@@ -476,12 +436,13 @@ footer a:hover {
 }
 
 .go-top:hover {
-    background: #f1c11a;
-    color: #ffffff;
+    background: var(--primary-color, #F1C11A);
+    color: var(--secondary-color, #FFF);
 }
 
-
-/* social icon section  */
+/* 
+ * Social
+ */
 .social-icon {
   padding: 0;
   margin: 0;
@@ -494,7 +455,7 @@ footer a:hover {
 
 .social-icon li a {
   border-radius: 100px;
-  color: #626262;
+  color: var(--third-color, #828282);
   font-size: 18px;
   text-decoration: none;
   transition: all 0.4s ease-in-out;
@@ -507,11 +468,13 @@ footer a:hover {
 }
 
 .social-icon li a:hover {
-  background-color: #ffffff;
-  color: #111112;
+  background-color: var(--primary-color, #F1C11A);
+  color: var(--fourth-color, #111);
 }
 
-/* Mobile Responsive */
+/* 
+ * Mobile Responsive 
+ */
 @media (max-width: 980px) {
 
   h1 {
@@ -532,7 +495,6 @@ footer a:hover {
 
 }
 
-
 @media (max-width: 768px) {
 
   h1 {
@@ -550,25 +512,17 @@ footer a:hover {
 
 }
 
-
 @media (max-width: 700px) {
 
-  #home {height: 100vh;}
-
-  .modal-dialog .modal-content {
-    padding: 50px 20px;
+  #home {
+    height: 100vh;
   }
 
-  footer {text-align: center;}
+  footer {
+    text-align: center;
+  }
   footer .col-sm-6 {
     padding-bottom: 32px;
   }
-
-  .modal-dialog .close {
-  font-size: 35px;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-}
 
 }
