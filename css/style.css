@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #F1C11A;
+  --primary-color: #021533;
   --secondary-color: #FFF;
   --third-color: #828282;
   --fourth-color: #111;
@@ -61,7 +61,7 @@ p {
 }
 
 strong {
-  color: var(--primary-color, #F1C11A);
+  color: var(--primary-color, #021533);
   font-weight: 700;
 }
 
@@ -290,7 +290,7 @@ footer {
 }
 
 #home .btn:hover {
-  background: var(--primary-color, #F1C11A);
+  background: var(--primary-color, #021533);
   color: var(--secondary-color, #FFF);
   border-color: transparent;
 }
@@ -312,7 +312,7 @@ footer {
 
 /* feature section */
 #feature {
-  background: var(--primary-color, #F1C11A);
+  background: var(--primary-color, #021533);
 }
 
 #feature .icon {
@@ -379,7 +379,7 @@ footer {
 }
 
 #contact input[type='submit']:hover {
-  background: var(--primary-color, #F1C11A);
+  background: var(--primary-color, #021533);
 }
 
 /* 
@@ -398,7 +398,7 @@ footer a {
 }
 
 footer a:hover {
-	color: var(--primary-color, #F1C11A);
+	color: var(--primary-color, #021533);
 }
 
 /* svg */
@@ -436,8 +436,8 @@ footer a:hover {
 }
 
 .go-top:hover {
-    background: var(--primary-color, #F1C11A);
-    color: var(--secondary-color, #FFF);
+  background: var(--primary-color, #021533);
+  color: var(--secondary-color, #FFF);
 }
 
 /* 
@@ -468,8 +468,8 @@ footer a:hover {
 }
 
 .social-icon li a:hover {
-  background-color: var(--primary-color, #F1C11A);
-  color: var(--fourth-color, #111);
+  background-color: var(--primary-color, #021533);
+  color: var(--secondary-color, #FFF);
 }
 
 /* 
